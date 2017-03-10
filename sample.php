@@ -21,8 +21,8 @@
         $all=[];
         while($row = $result->fetch_assoc()) {
         	$return = array(
-        				"id" => $row['id'],
-        				"name" => $row['name'],
+                        "id" => $row['id'],
+                        "name" => $row['name'],
                         "address" => $row['address'],
                         "age" => $row['age'],
                         "comment" => $row['comment']
@@ -33,9 +33,7 @@
         echo json_encode($all);
 
     } else {
-        // echo "0 results";
-        $test = "none";
-        echo json_encode($return);
+        echo "No result found";
     }
 
     $conn->close();
